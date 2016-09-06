@@ -3,8 +3,20 @@
 {% block content %}
     <div class="center-info">
         <form class="form-horizontal" enctype="multipart/form-data" method="post" action="/package/">
+
             {% include 'inc/comm_select.html' %}
-            <button type="button" class="btn btn-warning" onclick="UploadPackage()">提交</button>
+
+
+
+            <div class="form-group" style="margin-top: 20px">
+                <div class="col-sm-offset-5 col-sm-4">
+                    <button type="submit" class="btn btn-warning">提交</button>
+                </div>
+            </div><!-- end submit botton-->
+            {% for msg in err_msg %}
+                <h3>{{ msg }}</h3>
+            {% endfor %}
+
 
         </form>
     </div>

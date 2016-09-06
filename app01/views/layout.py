@@ -47,10 +47,17 @@ def get_svn(request):
 def upload_package(request):
     upload_obj = PackageForm()
     if request.method == 'POST':
-        upload_info_obj = request.POST
-        if upload_info_obj.is_valid():
-            upload_info = upload_info_obj.clean()
-            print(upload_info)
+        push_target_id = request.POST['PushTarget']
+        production_line_id = request.POST['productions-line']
+        production_id = request.POST['production']
+        err_msg_list = []
+        if int(push_target_id) == 1:
+            err_msg_list.append('没有选择发布环境')
+        if not production_line_id.isdigit():
+            err_msg_list.append('没有选择产品线')
+        if not production_id.isdigit():
+            err_msg_list.append('没有选择产品')
+        return render(request, 'main/package.html', {'upload': upload_obj, 'err_msg': err_msg_list})
 
     return render(request, 'main/package.html', {'upload': upload_obj})
 
