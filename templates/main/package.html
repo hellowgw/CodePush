@@ -1,0 +1,12 @@
+{% extends "main/layout.html" %}
+
+{% block content %}
+    <div class="center-info">
+        <form class="form-horizontal" enctype="multipart/form-data" method="post" action="/package/">
+            {% include 'inc/comm_select.html' %}
+            <button type="button" class="btn btn-warning" onclick="UploadPackage()">提交</button>
+
+        </form>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,101 @@
+
+body{
+    margin: 0 auto;
+}
+
+/*option{*/
+    /*text-align: center;*/
+/*}*/
+
+
+.login-btn{
+    margin-left: 30%
+
+}
+
+.usermodal{
+    position: fixed;
+    left: 49%;
+    top: 46%;
+    width: 500px;
+    height: 500px;
+    margin-left: -250px;
+    margin-top: -200px;
+    /*background-color: #dddddd;*/
+}
+
+.login-info{
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    width: 500px;
+    height: 500px;
+    margin-left: -250px;
+    margin-top: -200px;
+    background-color: #1b6d85;
+}
+
+.pg-header{
+    position: absolute;
+    height: 48px;
+    width: 100%;
+    background-color: #2aabd2;
+}
+
+.body-menu{
+    position: absolute;
+    top: 48px;
+    left: 0;
+    bottom: 0;
+    width: 200px;
+    overflow: auto;
+    border-top: solid 2px chartreuse ;
+}
+
+.body-content{
+    position: absolute;
+    top: 48px;
+    right: 0;
+    bottom: 0;
+    left: 200px;
+    background-color: #9d9d9d;
+    overflow: auto;
+    border-top: solid 2px chartreuse ;
+    border-left: solid 2px chartreuse ;
+}
+
+.menu-btn{
+    height: 60px;
+    width: 200px;
+    border: solid 3px coral;
+    position: relative;
+    background-color: #8c8c8c;
+
+}
+.menu-btn-center{
+    position: absolute;
+    height: 30px;
+    width: 150px;
+    top: 50%;
+    left: 50%;
+    margin-top: -15px;
+    margin-left: -75px;
+    cursor: pointer;
+}
+
+.add-board{
+    border: solid 2px crimson;
+    padding: 4px;
+}
+
+
+.center-info{
+    position: absolute;
+    background-color: #4cae4c;
+    width: 500px;
+    height: 500px;
+    top: 50%;
+    left: 50%;
+    margin-top: -250px;
+    margin-left: -250px;
+}
