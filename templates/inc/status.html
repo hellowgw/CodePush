@@ -1,11 +1,23 @@
 <div class="col-sm-offset-4 col-sm-4">
-    {% for e_msg in err_msg %}
-        <h5>{{ e_msg }}</h5>
-    {% endfor %}
+    <table class="table table-condensed table-bordered">
+        <tbody>
+            {% for e_msg in err_msg %}
+                <tr class="warning">
+                    <td style="color: red"><h5>{{ e_msg }}</h5></td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
 </div><!-- end error mesaage -->
 
 <div class="col-sm-offset-4 col-sm-4">
-    {% for s_msg in success_msg %}
-        <h5>{{ s_msg }}</h5>
-    {% endfor %}
+    <table class="table table-condensed table-bordered">
+        <tbody>
+            {% for s_msg in success_msg %}
+                <tr class="warning">
+                    <td style="color: green"><h5>{{ s_msg }}</h5></td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
 </div><!-- end success mesaage -->
