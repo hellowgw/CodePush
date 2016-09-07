@@ -6,19 +6,22 @@
 
             {% include 'inc/comm_select.html' %}
 
-
+            <div class="form-group" style="margin-top: 20px;margin-left: 6px">
+                <div class="col-sm-offset-4 col-sm-4">
+                    <input type="file" name="upload_file">
+                </div>
+            </div><!-- end Upload File -->
 
             <div class="form-group" style="margin-top: 20px">
                 <div class="col-sm-offset-5 col-sm-4">
                     <button type="submit" class="btn btn-warning">提交</button>
                 </div>
             </div><!-- end submit botton-->
-            {% for msg in err_msg %}
-                <h3>{{ msg }}</h3>
-            {% endfor %}
-
 
         </form>
+
+        {% include 'inc/status.html' %}
+
     </div>
 
 {% endblock %}

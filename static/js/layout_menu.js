@@ -17,12 +17,6 @@ function RollBack(){
     window.location.href="/rollback";
 }
 
-function UploadPackage(){
-    var push_id = $('#id_PushTarget').val();
-    var production_line_id = $('#production-line').val();
-    var production_id = $('#production').val();
-}
-
 /** env choice select **/
 
 //config production line select option

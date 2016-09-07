@@ -14,14 +14,18 @@ Including another URLconf
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
 from django.conf.urls import url
-from app01.views import layout, login
+from app01.views import comm
+from app01.views import login
+from app01.views import svn
+from app01.views import package
+from app01.views import rollback
 
 urlpatterns = [
-    url(r'^login/$', layout.run_rollback),
-    url(r'^svn/$', layout.get_svn),
-    url(r'^package/$', layout.upload_package),
-    url(r'^rollback/$', layout.run_rollback),
-    url(r'^data/$', layout.data),
-    url(r'^get_pro_info/$', layout.get_production_info),
+    url(r'^login/$', login.login),
+    url(r'^test/$', comm.test),
+    url(r'^svn/$', svn.get_svn),
+    url(r'^package/$', package.upload_package),
+    url(r'^rollback/$', rollback.run_rollback),
+    url(r'^get_pro_info/$', comm.get_production_info),
     url(r'^$', login.login),
 ]
